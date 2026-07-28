@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chevrolet Brasil - Legado de Qualidade e Inovação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1528 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: #a01a2f;
+            padding: 15px 0;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #c41e3a;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(196, 30, 58, 0.7), rgba(139, 21, 40, 0.7)), 
+                        url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663770251570/aqqhbKYqrQZbGGTh.jpg') center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #c41e3a;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #c41e3a;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            transform: scale(1.05);
+        }
+
+        /* Seção de Destaque - Opala Comodoro */
+        .destaque-opala {
+            background-color: white;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-left: 8px solid #c41e3a;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .destaque-opala h2 {
+            color: #c41e3a;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .opala-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .opala-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .opala-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        .opala-info h3 {
+            color: #c41e3a;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .opala-info p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #555;
+        }
+
+        .specs {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .specs h4 {
+            color: #c41e3a;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .spec-item {
+            background-color: white;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 4px solid #c41e3a;
+        }
+
+        .spec-item strong {
+            color: #c41e3a;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Galeria */
+        .galeria {
+            padding: 60px 20px;
+            background-color: white;
+            margin-bottom: 40px;
+        }
+
+        .galeria h2 {
+            color: #c41e3a;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .galeria-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(196, 30, 58, 0.3);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .galeria-info {
+            padding: 20px;
+        }
+
+        .galeria-info h3 {
+            color: #c41e3a;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .galeria-info p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        /* História */
+        .historia {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+
+        .historia h2 {
+            color: #c41e3a;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #c41e3a;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #c41e3a;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 20px;
+            width: 4px;
+            height: 40px;
+            background-color: #c41e3a;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .timeline-item h3 {
+            color: #c41e3a;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item .year {
+            color: #999;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Botão Curtir */
+        .like-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .like-btn {
+            background-color: #f4f4f4;
+            border: 2px solid #c41e3a;
+            color: #c41e3a;
+            padding: 15px 35px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .like-btn:hover {
+            background-color: #c41e3a;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .like-btn.active {
+            background-color: #c41e3a;
+            color: white;
+            box-shadow: 0 0 15px rgba(196, 30, 58, 0.5);
+        }
+
+        .like-count {
+            font-size: 1.1em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1528 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .opala-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .destaque-opala h2,
+            .galeria h2,
+            .historia h2 {
+                font-size: 1.8em;
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .destaque-opala,
+        .galeria,
+        .historia {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>🚗 CHEVROLET BRASIL</h1>
+            <p>100 Anos de Legado, Qualidade e Inovação</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#opala">Opala Comodoro</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>O Ícone das Estradas Brasileiras</h2>
+            <p>Conheça a história do Chevrolet Opala Comodoro, o carro que marcou gerações</p>
+            <a href="#opala" class="btn">Descubra Mais</a>
+        </div>
+    </section>
+
+    <!-- Destaque Opala Comodoro -->
+    <section class="destaque-opala" id="opala">
+        <div class="container">
+            <h2>✨ Chevrolet Opala Comodoro - A Lenda</h2>
+            
+            <div class="opala-grid">
+                <div>
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663770251570/CyitWIjLeVlFeIoU.jpg" alt="Chevrolet Opala Comodoro 1977">
+                </div>
+                <div class="opala-info">
+                    <h3>Um Carro Icônico</h3>
+                    <p>O Chevrolet Opala Comodoro é mais do que um carro - é um símbolo da história automóvel brasileira. Produzido entre 1968 e 1992, o Opala conquistou o coração dos brasileiros com seu design elegante, conforto incomparável e performance confiável.</p>
+                    <p>A versão Comodoro, lançada para substituir a Gran Luxo, representava o puro luxo com excelentes acabamentos, incluindo detalhes no painel imitando jacarandá e um interior sofisticado que não tinha rival na época.</p>
+                </div>
+            </div>
+
+            <div class="opala-grid" style="grid-template-columns: 1fr 1fr; margin-top: 40px;">
+                <div class="opala-info">
+                    <h3>Especificações Técnicas</h3>
+                    <p>O Opala Comodoro era equipado com um motor 4.1 de 6 cilindros em linha, capaz de gerar 171 cavalos de potência e um torque impressionante de 32,5 kgfm. Com transmissão manual de 4 marchas, o carro acelerava de 0 a 100 km/h em aproximadamente 11,5 segundos.</p>
+                    <p>Essas características o tornavam um dos carros mais potentes e confortáveis do mercado brasileiro, ideal tanto para viagens longas quanto para o dia a dia urbano.</p>
+                </div>
+                <div>
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663770251570/FJgPEnGGfquSLqVh.jpeg" alt="Interior Opala Comodoro">
+                </div>
+            </div>
+
+            <div class="specs">
+                <h4>📊 Ficha Técnica do Opala Comodoro</h4>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <strong>Motor</strong>
+                        4.1 6 cilindros em linha
+                    </div>
+                    <div class="spec-item">
+                        <strong>Potência</strong>
+                        171 cavalos de potência
+                    </div>
+                    <div class="spec-item">
+                        <strong>Torque</strong>
+                        32,5 kgfm
+                    </div>
+                    <div class="spec-item">
+                        <strong>Aceleração</strong>
+                        0-100 km/h em ~11,5s
+                    </div>
+                    <div class="spec-item">
+                        <strong>Transmissão</strong>
+                        Manual de 4 marchas
+                    </div>
+                    <div class="spec-item">
+                        <strong>Tração</strong>
+                        Traseira
+                    </div>
+                    <div class="spec-item">
+                        <strong>Produção</strong>
+                        1968 a 1992
+                    </div>
+                    <div class="spec-item">
+                        <strong>Status</strong>
+                        Clássico Cult
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <h2>🖼️ Galeria de Clássicos</h2>
+            
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663770251570/aqqhbKYqrQZbGGTh.jpg" alt="Opala Comodoro Elegante">
+                    <div class="galeria-info">
+                        <h3>Elegância Atemporal</h3>
+                        <p>O design clássico do Opala Comodoro continua impressionando. Suas linhas suaves e proporções perfeitas o tornam um ícone do design automóvel brasileiro.</p>
+                    </div>
+                </div>
+
+                <div class="galeria-item">
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663770251570/FJgPEnGGfquSLqVh.jpeg" alt="Interior Luxuoso">
+                    <div class="galeria-info">
+                        <h3>Interior de Luxo</h3>
+                        <p>O interior do Opala Comodoro era sinônimo de conforto e sofisticação. Detalhes em jacarandá e acabamentos premium definiam a experiência de quem dirigia.</p>
+                    </div>
+                </div>
+
+                <div class="galeria-item">
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663770251570/CyitWIjLeVlFeIoU.jpg" alt="Opala Comodoro Azul">
+                    <div class="galeria-info">
+                        <h3>Cores Clássicas</h3>
+                        <p>O Opala Comodoro estava disponível em diversas cores elegantes. Cada tonalidade realçava ainda mais a beleza do design icônico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- História -->
+    <section class="historia" id="historia">
+        <div class="container">
+            <h2>📖 A História da Chevrolet no Brasil</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="year">1925</div>
+                    <h3>Chegada da Chevrolet</h3>
+                    <p>No dia 26 de janeiro de 1925, foi registrada a Companhia Geral de Motores S.A. em São Paulo, com um capital inicial de U$ 270 mil. A Chevrolet começava sua jornada revolucionária no Brasil, trazendo mobilidade para as pessoas e progresso para as cidades.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">1930-1960</div>
+                    <h3>Expansão e Consolidação</h3>
+                    <p>Durante décadas, a Chevrolet se consolidou como a marca de confiança dos brasileiros. Seus caminhões e utilitários foram essenciais para o desenvolvimento da infraestrutura do país, levando progresso para o interior.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">1968</div>
+                    <h3>Nasce o Opala</h3>
+                    <p>O Chevrolet Opala é lançado como o primeiro automóvel de passeio desenvolvido e fabricado pela General Motors do Brasil. Rapidamente se torna um ícone, conquistando o mercado com seu design inovador e conforto incomparável.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">1970-1980</div>
+                    <h3>Era de Ouro do Opala</h3>
+                    <p>O Opala Comodoro se estabelece como o carro de luxo por excelência. Políticos, executivos e famílias abastadas escolhem o Comodoro como símbolo de status e sofisticação. O carro se torna lenda nas ruas brasileiras.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">1992</div>
+                    <h3>Fim de Uma Era</h3>
+                    <p>Após 24 anos de produção e mais de 1 milhão de unidades vendidas, o Chevrolet Opala encerra sua produção. Mas seu legado permanece vivo no coração dos brasileiros e nas ruas do país.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="year">2025</div>
+                    <h3>Legado Imortal</h3>
+                    <p>Mais de 30 anos após o fim da produção, o Opala Comodoro continua sendo um clássico cult. Colecionadores, entusiastas e amantes de carros clássicos preservam e celebram este ícone da história automóvel brasileira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Curtir -->
+    <section class="container">
+        <div class="like-section">
+            <h3>Gostou do conteúdo sobre o Opala?</h3>
+            <p style="margin-bottom: 20px;">Deixe sua curtida para apoiar o blog!</p>
+            <button class="like-btn" id="btnCurtir">
+                <span id="heartIcon">❤️</span> Curtir Página
+            </button>
+            <div class="like-count" id="contador">1.248 pessoas curtiram isso</div>
+        </div>
+    </section>
+
+    <script>
+        const btnCurtir = document.getElementById('btnCurtir');
+        const contador = document.getElementById('contador');
+        let curtido = false;
+        let numeroCurtidas = 1248;
+
+        btnCurtir.addEventListener('click', () => {
+            curtido = !curtido;
+            
+            if (curtido) {
+                numeroCurtidas++;
+                btnCurtir.classList.add('active');
+                btnCurtir.innerHTML = '❤️ Página Curtida!';
+                contador.style.color = '#c41e3a';
+                contador.style.fontWeight = 'bold';
+            } else {
+                numeroCurtidas--;
+                btnCurtir.classList.remove('active');
+                btnCurtir.innerHTML = '❤️ Curtir Página';
+                contador.style.color = '#666';
+                contador.style.fontWeight = 'normal';
+            }
+            
+            contador.innerText = `${numeroCurtidas.toLocaleString('pt-BR')} pessoas curtiram isso`;
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <h3>Chevrolet Brasil - Legado de Qualidade</h3>
+            <p>Celebrando 100 anos de história, inovação e confiança nas ruas brasileiras</p>
+            <p>© 2025 Blog Chevrolet Brasil | Todos os direitos reservados</p>
+            <p>
+                <a href="https://www.chevrolet.com.br" target="_blank">Visite o site oficial da Chevrolet</a> | 
+                <a href="mailto:contato@chevroletbrasil.com">Envie uma mensagem</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
